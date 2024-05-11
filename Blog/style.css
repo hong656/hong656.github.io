@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+.header{
+    width: 100%;
+    height: 150px;
+    background-color: grey;
+}
+.body{
+    width: 100%;
+    height: 1000px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.big-body{
+    width: 79%;
+    height: 100%;
+    background-color: grey;
+}
+.small-body{
+    width: 20%;
+    height: 100%;
+    background-color: grey;
+}
+.footer{
+    margin-top: 15px;
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+}

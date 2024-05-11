@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+.header{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: grey;
+}
+.header1{
+    width: 100%;
+    height: 50px;
+}
+.body{
+    margin-top: 15px;
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+.body2{
+    margin-top: 15px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+.middle{
+    width: 40%;
+    height: 100%;
+    background-color: grey;
+}
+.side{
+    width: 29%;
+    height: 100%;
+    background-color: grey;
+}
+.footer{
+    margin-top: 15px;
+    width: 100%;
+    height: 50px;
+    background-color: grey;
+}
+
