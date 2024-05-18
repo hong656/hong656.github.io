@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+h4{
+    color: #3ACEC3;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    width: 15%;
+    height: 100%;
+    text-align: center;
+    padding-top: 25px;
+}
+.right{
+    width: 30%;
+    height: 100%;
+    padding-top: 27px;
+}
+.body-top{
+    width: 100%;
+    height: 500px;
+    padding-top: 70px;
+    background-color: #3ACEC3;
+}
+.in-body-top{
+    width: 100%;
+    height: 230px;
+}
+.box{
+    margin: auto;
+    width: 30%;
+    height: 100%;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+}
+.in-body-bottom{
+    padding-top: 40px;
+    width: 100%;
+    height: 200px;
+}
+.in-body-bottom h2{
+    font-family: Radio Canada Big, sans-serif;
+    color: white;
+    text-align: center;
+}
+.in-body-bottom h3{
+    color: white;
+    text-align: center;
+    font-family: Roboto;
+}
+.body-bottom{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.small{
+    width: 100%;
+    height: 520px;
+}
+.inside{
+    width: calc(100%/3);
+    height: 100%;
+}
+.head{
+    width: 100%;
+    height: 70px;
+    padding-top: 40px;
+    color: #1e1e73;
+}
+#in-1{
+    padding-left: 45px;
+    padding-right: 45px;
+    float: left;
+}
+#in-2{
+    float: left;
+}
+#in-3{
+    float: left;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+.food{
+    margin-top: 20px;
+    width: 100%;
+    height: 260px;
+    background-color: #3ACEC3;
+}
+.food img{
+    width: 100%;
+    height: 100%;
+}
+.footer{
+    width: 100%;
+    height: 80px;
+    margin-bottom: 4px;
+    background-color: #dfdff9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    margin-top: 0;
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+    h3{
+        font-size: 15px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    p{
+        font-size: 15px;
+    }
+    .left{
+        padding-top: 27px;
+    }
+    .right{
+        width: 50%;
+        padding-top: 28px;
+    }
+    .right li{
+        font-size: 13px;
+    }
+    .body-bottom{
+        padding-top: 30px;
+    }
+    #in-1{
+        width: calc(100%/2);
+        height: 480px;
+    }
+    #in-2{
+        width: calc(100%/2);
+        padding-right: 20px;
+        height: 480px;
+    }
+    #in-3{
+        width: 100%;
+        height: 180px;
+    }
+    .head{
+        height: 50px;
+        padding-top: 0;
+    }
+    .letter p{
+        margin-top: 0;
+    }
+    .body-bottom{
+        height: 700px;
+    }
+}
+@media screen and (min-width:390px) and (max-width:844px){
+    p{
+        font-size: 15px;
+    }
+    .header{
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+    }
+    .left h3{
+        font-size: 15px;
+    }
+    .right{
+        width: 100%;
+        padding-top: 10px;     
+    }
+    .right li{
+        font-size: 12px;
+    }
+    .body-top{
+        height: 300px;
+        padding-top: 10px;
+    }
+    .in-body-top{
+        height: 200px;
+    }
+    .box{
+        width: 40%;
+        height: 100%;
+    }
+    .in-body-bottom{
+        height: 100px;
+        padding-top: 0;
+    }
+    .in-body-bottom h2{
+        font-size: 20px;
+    }
+    .in-body-bottom h3{
+        font-size: 15px;
+    }
+    .body-bottom{
+        padding-top: 0;
+    }
+    .small{
+        flex-direction: column;
+    }
+    #in-1{
+        width: 100%;
+        height: 370px;
+    }
+    #in-2{
+        width: 100%;
+        padding-right: 45px;
+        padding-left: 45px;
+        height: 470px;
+    }
+    #in-3{
+        width: 100%;
+        height: 330px;
+    }
+}
