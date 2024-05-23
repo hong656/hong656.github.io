@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+}
+.box{
+    width: 500px;
+    height: 400px;  
+    margin: auto;
+    margin-top: 185px;
+    padding: 40px 20px 40px 20px;
+    border-radius: 10px;
+    background-color: rgb(205, 205, 205);
+}
+.col-auto .mb-3{
+    background-color: #919191;
+    float: right;
+    width: 80px;
+    border-radius: 30px;
+    border: 0;
+}
+#name{
+    margin-top: 20px;
+}
+#password{
+    margin-top: 10px;
+}

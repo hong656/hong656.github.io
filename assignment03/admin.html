@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css-js/admin.css">
+</head>
+<body>
+    <div class="all">
+        <div class="left">
+            <div class="option" id="d-option">
+                <div class="top-option">
+                    <p style="font-size: 15px;">Your Logo</p>
+                </div>
+                <div class="lader">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text"><a href=""><p>Check the location</p></a></div>
+                </div>
+                <div class="lader">
+                    <div class="icon"><i class="fa-solid fa-gift"></i></div>
+                    <div class="text"><a href=""><p>Gift for Friend</p></a></div>
+                </div><div class="lader">
+                    <div class="icon"><i class="fa-regular fa-file"></i></div>
+                    <div class="text"><a href=""><p>Save file</p></a></div>
+                </div><div class="lader">
+                    <div class="icon"><i class="fa-regular fa-calendar-days"></i></div>
+                    <div class="text"><a href=""><p>Add to Calender</p></a></div>
+                </div><div class="lader">
+                    <div class="icon"><i class="fa-solid fa-bookmark"></i></div>
+                    <div class="text"><a href=""><p>Save to Bookmark</p></a></div>
+                </div><div class="lader">
+                    <div class="icon"><i class="fa-regular fa-clock"></i></div>
+                    <div class="text"><a href=""><p>Time for arrival</p></a></div>
+                </div><div class="lader">
+                    <div class="icon"><i class="fa-solid fa-shop"></i></div>
+                    <div class="text"><a href=""><p>Shopping now</p></a></div>
+                </div><div class="lader">
+                    <div class="icon"><i class="fa-solid fa-repeat"></i></div>
+                    <div class="text"><a href=""><p>Linking</p></a></div>
+                </div><div class="lader">
+                    <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="text"><a href=""><p>Search fo more</p></a></div>
+                </div><div class="lader">
+                    <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    <div class="text"> <a href=""><p>More...</p></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------all the right---------- -->
+        <div class="right">
+            <div class="main">
+                <div class="header">
+                    <div class="header-left">
+                        <div class=""><i class="fa-solid fa-house" style="font-size: 25px;"></i></div>
+                        <div class="home"><a href="">Home</a><i class="fa-solid fa-greater-than"></i></div>
+                        <div class="home"><a href="">Product</a><i class="fa-solid fa-greater-than"></i></div>
+                        <div class="home"><a href="">Orders</a></div>                       
+                    </div>
+                    <div class="header-right">
+                        <!-- Example split danger button -->
+                        <i class="bi bi-brightness-alt-high-fill" id="toggleDark"></i>
+                        <div class="pfp" onclick="tolog()">
+                            <img src="pic/photo_2024-05-19_18-33-02.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="main-bottom">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Category</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td><img width="70px" src="https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"></td>
+                            <td> Samsung Universe 9</td>
+                            <td> 1249</td>
+                            <td> Samsung</td>
+                            <td> smartphones</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td> <img width="70px" src="https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"></td>
+                            <td> iPhone X</td>
+                            <td> 899</td>
+                            <td> Apple</td>
+                            <td> smartphones</td>
+                          </tr>
+                          
+                          <tr>
+                            <th scope="row">3</th>
+                            <td> <img width="70px" src="https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"></td>
+                            <td> iPhone 9</td>
+                            <td> 549</td>
+                            <td> Apple</td>
+                            <td> smartphones</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td> <img width="70px" src="https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"></td>
+                            <td> OPPOF19</td>
+                            <td> 280</td>
+                            <td> OPPO</td>
+                            <td> smartphones</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td> <img width="70px" src="https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"></td>
+                            <td> Huawei P30</td>
+                            <td> 499</td>
+                            <td> Huawei</td>
+                            <td> smartphones</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td> <img width="70px" src="https://cdn.dummyjson.com/product-images/6/thumbnail.png"></td>
+                            <td> MacBook Pro</td>
+                            <td> 1749</td>
+                            <td> Apple</td>
+                            <td> laptops</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td> <img width="70px" src="https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"></td>
+                            <td> Samsung Galaxy Book</td>
+                            <td> 1499</td>
+                            <td> Samsung</td>
+                            <td> laptops</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td> <img width="70px" src="https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"></td>
+                            <td> Microsoft Surface Laptop 4</td>
+                            <td> 1499</td>
+                            <td> Microsoft Surface</td>
+                            <td> laptops</td>
+                         </tr>
+                         <tr>
+                            <th scope="row">9</th>
+                            <td> <img width="70px" src="https://cdn.dummyjson.com/product-images/9/thumbnail.jpg"></td>
+                            <td> Infinix INBOOK</td>
+                            <td> 1099</td>
+                            <td> Infinix</td>
+                            <td> laptops</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td> <img width="70px" src="https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg"></td>
+                            <td> HP Pavilion 15-DK1056WM</td>
+                            <td> 1099</td>
+                            <td> HP Pavilion</td>
+                            <td> laptops</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <td> <img width="60px" src="https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"></td>
+                            <td> perfume Oil</td>
+                            <td> 13</td>
+                            <td> Impression of Acqua Di Gio</td>
+                            <td> fragrances</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td> <img width="60px" src="https://cdn.dummyjson.com/product-images/15/thumbnail.jpg"></td>
+                            <td> Eau De Perfume Spray</td>
+                            <td> 30</td>
+                            <td> Lord - Al-Rehab</td>
+                            <td> fragrances</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13</th>
+                            <td> <img width="60px" src="https://cdn.dummyjson.com/product-images/16/thumbnail.jpg"></td>
+                            <td> Hyaluronic Acid Serum</td>
+                            <td> 19</td>
+                            <td> L'Oreal Paris</td>
+                            <td> skincare</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+        <!-- --------end right---------- -->
+    </div>
+    <script src="css-js/ad.js"></script>
+    <script>
+        fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(console.log);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
