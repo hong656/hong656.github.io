@@ -5,22 +5,37 @@ function tolog() {
     window.location.href = "index.html";
 }
 
-// ----------------------dark---------------
-const toggle= document.getElementById("toggleDark");
-const body =document.querySelector('body');
+// -----------------------dark mode-----------------------
+document.addEventListener('DOMContentLoaded', (event) => {
+    loadTheme();
+});
 
-toggle.addEventListener('click',function(){
-    this.classList.toggle('bi-moon');
-    if(this.classList.toggle('bi-brightness-high-fill')){
-        body.style.background="black";
-        body.style.color="white";
-        body.style.transition="2s";
+function saveTheme() {
+    const themeSelector = document.getElementById('theme-selector');
+    const selectedTheme = themeSelector.value;
+    localStorage.setItem('theme', selectedTheme);
+    applyTheme(selectedTheme);
+}
+
+function loadTheme() {
+    const themeSelector = document.getElementById('theme-selector');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        themeSelector.value = savedTheme;
+        applyTheme(savedTheme);
     }
-    else{      
-        body.style.background="white";
-        body.style.color="black";
-        body.style.transition="2s";
+}
+
+function applyTheme(theme) {
+    document.body.className = theme;
+    if (theme === 'dark') {
+        document.body.style.backgroundColor = 'black';
+    } else {
+        document.body.style.backgroundColor = 'white';
     }
-})
+}
+
+
+
 
 
