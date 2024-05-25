@@ -13,7 +13,7 @@ toggle.addEventListener('click',function(){
     this.classList.toggle('bi-moon');
     if(this.classList.toggle('bi-brightness-high-fill')){
         body.style.background="black";
-        body.style.color="grey";
+        body.style.color="white";
         body.style.transition="2s";
     }
     else{      
@@ -22,3 +22,5 @@ toggle.addEventListener('click',function(){
         body.style.transition="2s";
     }
 })
+
+
