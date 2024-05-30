@@ -357,25 +357,16 @@ a{
     justify-content: space-between;
 }
 .amount{
-    width: 58px;
+    width: 80px;
     height: 100%;
-    padding-top: 4px;
     display: flex;
+    justify-content: space-between;
 }
-.amount .fa-circle-minus{
-    margin-right: 5px;
-}
-.amount .fa-circle-plus{
-    margin-left: 5px;
-}
-.amount .fa-ellipsis{
-    margin-top: 4px ;
-}
-.amount .fa-circle-minus:hover{
+.amount .plus:hover{
     color: grey;
     cursor: pointer;
 }
-.amount .fa-circle-plus:hover{
+.amount .minus:hover{
     color: grey;
     cursor: pointer;
 }
