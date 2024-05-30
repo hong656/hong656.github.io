@@ -488,19 +488,19 @@ a{
     border-top: 2px solid rgb(132, 132, 132);
 }
 .footer-left{
-    width: 60%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .menu{
-    width: 30%;
+    width: 40%;
     height: 40%;
 }
 .footer-right{
     width: 30%;
-    margin-left: 100px;
+    margin-left: 350px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -532,3 +532,59 @@ a{
     letter-spacing: 1px;
 }
 
+/* -----------------------reponsive */
+@media screen and (min-width:768px) and (max-width:1324px){
+    .footer-left{
+        width: 50%;
+    }
+    .footer-right{
+        margin-left: 300px;
+    }
+    .menu{
+        width: 45%;
+    }
+    .con-right{
+        height: 850px;
+    }
+    .con-line-product{
+        width: 80%;
+    }
+    .main-product{
+        width: 95%;
+        height: 600px;
+    }
+    .main-product-half{
+        height: 50%;
+    }
+    .product{
+        height: 95%;
+    }
+    .home{
+        width: 18%;
+        height: 100%;
+    }
+    .logo{
+        width: 40%;
+        height: 100%;
+    }
+    .list{
+        margin-left: 50px;
+        width: 30%;
+        height: 100%;
+    }
+    .search{
+        width: 15%;
+        height: 100%;
+        margin-left: 100px;
+    }
+    .es{
+        margin-left: 60px;
+        width: 60px;
+        height: 30px;
+    }
+    .icon{
+        margin-left: 60px;
+        width: 10%;
+        height: 100%;
+    }
+}
