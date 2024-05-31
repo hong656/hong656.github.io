@@ -188,4 +188,19 @@ i{
     .boxes{
         width: 1100px;
     }
+    .colorful{
+        width: 40%;
+    }
+    .ranbow{
+        width: 65%;
+    }
+    .word{
+        width: 80%;
+    }
+    .explore-market{
+        width: 25%;
+    }
+    .little-word{
+        width: 65%;
+    }
 }
