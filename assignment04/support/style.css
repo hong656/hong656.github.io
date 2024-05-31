@@ -11,6 +11,18 @@ a{
 .dark a{
     color: white;
 }
+.dark .small-letter{
+    color: white;
+}
+.dark .phara p{
+    color: white;
+}
+.dark .nocolor p{
+    color: white;
+} 
+.dark h6{
+    color: white;
+}
 .dark .categorie .list-group-item{
     background-color: #3f3f3f;
 }
@@ -156,7 +168,6 @@ a{
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -533,7 +544,7 @@ a{
 }
 
 /* -----------------------reponsive */
-@media screen and (min-width:768px) and (max-width:1324px){
+@media screen and (min-width:768px) and (max-width:1400px){
     .footer-left{
         width: 50%;
     }
