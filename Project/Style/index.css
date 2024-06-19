@@ -17,7 +17,7 @@ a{
 }
 .everything{
     width: 80%;
-    background-image: url(/pic/intro.jpg);
+    background-image: url(../pic/intro.jpg);
     height: 80vh;
     display: flex;
     overflow: hidden;
