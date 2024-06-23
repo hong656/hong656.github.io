@@ -23,7 +23,8 @@ a{
     overflow: hidden;
     border-radius: 40px;
     border: 10px solid black;
-    background-color: white;
+    position: relative;
+
 }
 .left{
     width: 45%;
@@ -36,7 +37,7 @@ a{
     padding-top: 15px;
     padding-left: 25px;
 }
-.left-header h1{
+h1{
     font-size: 40px;
     font-family: "Teko", sans-serif;
 }
@@ -114,4 +115,34 @@ a{
 }
 .ul a{
     color: white;
+}
+
+.center{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    padding-top: 15px;
+    padding-left: 25px;
+    top: 300px;
+}
+
+
+@media screen and (min-width:430px) and (max-width:767px){
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100%;
+    }
+    .center{
+        display: flex;
+    }
+    #a{
+        display: none;
+    }
+    #b{
+        display: none;
+    }
 }
