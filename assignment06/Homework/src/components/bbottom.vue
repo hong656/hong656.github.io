@@ -14,7 +14,7 @@
             <div class="inside" id="in-2">
                 <div class="head"><h2>Great Food</h2></div>
                 <div class="food">
-                    <img src="./pic/food.svg" alt="">
+                    <img src="../assets/pic/food.svg" alt="">
                 </div>
                 <div class="letter" style="margin-top: 20px;">
                     <p style="margin-top: 0;">

@@ -130,6 +130,10 @@ h1{
 
 
 @media screen and (min-width:385px) and (max-width:844px){
+    .everything{
+        width: 100%;
+        height: 100vh;
+    }
     .left{
         display: none;
     }

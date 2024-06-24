@@ -2,7 +2,7 @@
     <div class="body-top">
         <div class="in-body-top">
             <div class="box">
-                <img src="./pic/city.svg" alt="">
+                <img src="../assets/pic/city.svg" alt="">
             </div>
         </div>
         <div class="in-body-bottom">
