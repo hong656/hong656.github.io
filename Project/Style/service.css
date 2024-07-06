@@ -153,11 +153,12 @@
     width: 90%;
     height: 500px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .chair{
     position: relative;
-    width: 24%;
+    width: 345px;
     height: 100%;
 }
 .chair:hover .chair-mid{
