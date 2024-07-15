@@ -1,3 +1,4 @@
+
 <template>
     <div class="background">
         <div class="all">
@@ -5,11 +6,11 @@
             <h6>Input Username</h6>
             <div class="input-group mb-3">              
                 <span class="input-group-text" id="basic-addon1">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" v-model="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <h6>Input Password</h6>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="password" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="password" class="form-control" v-model="password" placeholder="password" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <span class="input-group-text" id="basic-addon2">***</span>
             </div>
             <h6>Fullname</h6>
@@ -21,7 +22,8 @@
                   <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
                 </div>
             </div>
-            <button type="button" class="btn btn-primary" style="background-color: #169999;">Submit</button>
+            <button type="button"  class="btn btn-primary" style="background-color: #169999;" @click.prevent="loginHandler">Submit</button>
+            <p style="color: red;text-align: center;padding-left: 50px;margin-top: 10px;">{{ errorMessage }}</p>
         </div>
     </div>
 </template>
@@ -67,3 +69,40 @@
 }
 
 </style>
+
+  <script>
+  import axios from "axios";
+  
+  export default {
+    data() {
+      return {
+        username: "",
+        password: "",
+        errorMessage: "",
+      };
+    },
+    methods: {
+      loginHandler() {
+        var req = {
+          username: this.username,
+          password: this.password,
+        };
+        axios
+          .post("http://localhost:5283/api/login", req)
+          .then((res) => {
+            if (res.status == 200) {
+              var data = res.data;
+              localStorage.setItem("isLogin", "OK");
+              localStorage.setItem("username", data.username);
+              this.$router.push("/admin/dachboard");
+            } else {
+              this.errorMessage = "Wrong username and password";
+            }
+          })
+          .catch((error) => {
+            this.errorMessage = "Wrong username and password";
+          });
+      },
+    },
+  };
+  </script>

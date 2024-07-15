@@ -2,31 +2,31 @@
 <template>
     <div>
         <div class="header">
-        <div class="header-1">
-            <div class="home">
-                <div class="logo">
-                    <a href="index.html"><img src="../assets/pic/logo1.png" alt=""></a>
+            <div class="header-1">
+                <div class="home">
+                    <div class="logo">
+                        <a href="index.html"><img src="../assets/pic/logo1.png" alt=""></a>
+                    </div>
+                    <RouterLink to="/"><h3>MUUTOS</h3></RouterLink>
                 </div>
-                <RouterLink to="/"><h3>MUUTOS</h3></RouterLink>
-            </div>
-            <div class="right">
-                <div class="right-header">
-                    <ul type="none">
-                        <li><RouterLink to="/"><p>Home</p></RouterLink></li>
-                        <li><RouterLink to="/store"><p>Store</p></RouterLink></li>
-                        <li><RouterLink to="/decor"><p>Decoration</p></RouterLink></li>
-                        <li><RouterLink to="/service"><p>Service</p></RouterLink></li>
-                        <li><RouterLink to="/about"><p>About</p></RouterLink></li>
-                    </ul>
-                </div>
-                <div class="icon">
-                    <RouterLink to="/login"><div class="small-icon"><i class="fa-solid fa-user"></i></div></RouterLink>
-                    <div class="small-icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                    <div class="small-icon"><i class="fa-brands fa-facebook"></i></div>
+                <div class="right">
+                    <div class="right-header">
+                        <ul type="none">
+                            <li><RouterLink to="/"><p>Home</p></RouterLink></li>
+                            <li><RouterLink to="/store"><p>Store</p></RouterLink></li>
+                            <li><RouterLink to="/decor"><p>Decoration</p></RouterLink></li>
+                            <li><RouterLink to="/service"><p>Service</p></RouterLink></li>
+                            <li><RouterLink to="/about"><p>About</p></RouterLink></li>
+                        </ul>
+                    </div>
+                    <div class="icon">
+                        <div class="small-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="small-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <div class="small-icon"><i class="fa-brands fa-facebook"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </template>
 

@@ -1,9 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import adminRouter from '../router/adminRouter'
 import HomeView from '../views/HomeView.vue'
+import AboutView from '../views/AboutView.vue'
+import service from '../views/service.vue'
+import decor from '../views/decor.vue'
+import store from '../views/store.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+
+const routes =[
     {
       path: '/',
       name: 'home',
@@ -15,29 +19,28 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue')
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/loginpage.vue')
+      component: AboutView
     },
     {
       path: '/service',
       name: 'service',
-      component: () => import('../views/service.vue')
+      component: service
     },
     {
       path: '/decor',
       name: 'decor',
-      component: () => import('../views/decor.vue')
+      component: decor
     },
     {
       path: '/store',
       name: 'store',
-      component: () => import('../views/store.vue')
+      component: store
     },
-  ]
+  ];
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [...routes, ...adminRouter.options.routes]
 })
 
 export default router
