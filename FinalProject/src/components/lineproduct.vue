@@ -1,11 +1,11 @@
 <template>
        <div class="line-product">
-        <div class="product" id="show">
+        <div class="product">
             <div class="pro-top">
                 <div class="small-cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
-                <div class="small-eye" id="pop-up">
+                <div class="small-eye" @click="showPopup">
                     <i class="fa-solid fa-eye"></i>
                 </div>
                 <img src="../assets/pic/living-room-brown-sofa-400x400.png" alt="">
@@ -65,8 +65,33 @@
             </div>
         </div>
      </div>
+     <div class="popup" v-show="popupVisible">
+        <div class="popup-content">
+            <div class="exit" @click="hidePopup"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+     </div>
 </template>
 
+
+<script>
+    export default {
+    data() {
+        return {
+            popupVisible: false,
+            selectedProduct: null
+        };
+    },
+    methods: {
+        showPopup() {
+            this.popupVisible = true;
+        },
+        hidePopup() {
+            this.popupVisible = false;
+            this.selectedProduct = null;
+        }
+    }
+}
+</script>
 
 <style>
     /* ---------------------------product */
@@ -149,4 +174,45 @@
         transition: 0.2s;
         transform: scale(1.1);
     }
+    /* -------------------------popup */
+    .popup{
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed position to ensure it stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it is above other content */
+}
+.popup[style*="display: block;"] {
+    display: block !important;
+}
+.popup-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: white;
+    width: 1000px;
+    height: 500px;
+}
+
+.exit{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    background-color: black;
+}
+.exit i{
+    text-align: center;
+    color: white;
+    margin-left: 7px;
+}
 </style>
+
+

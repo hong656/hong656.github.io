@@ -406,4 +406,17 @@ import slideAds from '../components/slideAds.vue'
     transform: translateY(0);
   }
 }
+
+
+
+
+/* -------------------------------swiper */
+.swiper{
+  width: 100%;
+  height: 500px;
+}
+.swiper img{
+  width: 100%;
+  height: 100%;
+}
 </style>
