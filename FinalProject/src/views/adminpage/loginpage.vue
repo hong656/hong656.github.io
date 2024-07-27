@@ -94,7 +94,7 @@
               var data = res.data;
               localStorage.setItem("isLogin", "OK");
               localStorage.setItem("username", data.username);
-              this.$router.push("/admin/dachboard");
+              this.$router.push("/admin/user");
             } else {
               this.errorMessage = "Wrong username and password";
             }

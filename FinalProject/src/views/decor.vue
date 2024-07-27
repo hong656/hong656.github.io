@@ -4,6 +4,7 @@
     import lineproduct from '../components/lineproduct.vue'
     import room from '../components/room.vue'
     import FooterBot from '../components/FooterBot.vue'
+    import lineProduct3 from '@/components/lineProduct3.vue'
 </script>
 
 <template>
@@ -40,7 +41,7 @@
             </div>
         </div>
     </div>
-    <lineproduct/>
+    <lineproduct style="margin-bottom: 50px;"/>
     <room/>
     <div class="big-letter">
         <div class="sell-left">
@@ -53,8 +54,7 @@
             </div>
         </div>
     </div>
-    <lineproduct/>
-    <lineproduct/>
+    <lineProduct3/>
     <div class="discount">
         <div class="dis-small">
             <div class="dis-small-middle" data-aos="fade-left">
@@ -75,7 +75,7 @@
                 <div class="input-group mb-3" style="width: 73%;">
                     <input type="text" class="form-control" placeholder="Email Adress" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
-                <button type="button" class="btn btn-secondary" style="background-color: #DAA520;height: 38px;font-size: 13px;letter-spacing: 2px;">SUBSCRIBE</button>
+                <button type="button" class="subscribe">SUBSCRIBE</button>
             </div>
         </div>
     </div>
@@ -289,4 +289,13 @@
         display: flex;
         justify-content: space-between;
     }
+/* ------------------------------sub */
+.subscribe{
+    background-color: #DAA520;
+    width: 100px;
+    height: 38px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
 </style>

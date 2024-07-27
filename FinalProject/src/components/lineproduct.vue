@@ -1,95 +1,49 @@
 <template>
-       <div class="line-product">
-        <div class="product">
-            <div class="pro-top">
-                <div class="small-cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div class="small-eye" @click="showPopup">
-                    <i class="fa-solid fa-eye"></i>
-                </div>
-                <img src="../assets/pic/living-room-brown-sofa-400x400.png" alt="">
-            </div>
-            <div class="pro-bottom">
-                <div class="letter"><p>Living Room</p></div>
-                <div class="letter"><h6>Brown Living Room Sofa</h6></div>
-                <div class="letter"><p>$1200.00</p></div>
-            </div>
-        </div>
-        <div class="product">
-            <div class="pro-top">
-                <div class="small-cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div class="small-eye" id="pop-up">
-                    <i class="fa-solid fa-eye"></i>
-                </div>
-                <img src="../assets/pic/egyptian-brown-vase-400x400.png" alt="">
-            </div>
-            <div class="pro-bottom">
-                <div class="letter"><p>Living Room</p></div>
-                <div class="letter"><h6>Egyptian Brown Vase</h6></div>
-                <div class="letter"><p>$400.00</p></div>
-            </div>
-        </div>
-        <div class="product">
-            <div class="pro-top">
-                <div class="small-cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div class="small-eye" id="pop-up">
-                    <i class="fa-solid fa-eye"></i>
-                </div>
-                <img src="../assets/pic/furniture-green-fabric-chair.png" alt="">
-            </div>
-            <div class="pro-bottom">
-                <div class="letter"><p>Living Room</p></div>
-                <div class="letter"><h6>Modern Emerald Fabric Chair</h6></div>
-                <div class="letter"><p>$860.00</p></div>
-            </div>
-        </div>
-        <div class="product">
-            <div class="pro-top">
-                <div class="small-cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div class="small-eye" id="pop-up">
-                    <i class="fa-solid fa-eye"></i>
-                </div>
-                <img src="../assets/pic/living-room-green-sofa-400x400.png" alt="">
-            </div>
-            <div class="pro-bottom">
-                <div class="letter"><p>Living Room</p></div>
-                <div class="letter"><h6>Green Living Room Sofa</h6></div>
-                <div class="letter"><p>$1800.00</p></div>
-            </div>
-        </div>
+    <div class="line-product" style="margin-bottom: 0;">
+     <div class="product" id="show" v-for="(el,indx) in productList" :key="indx" >
+         <div class="pro-top">
+             <div class="small-cart">
+                 <i class="fa-solid fa-cart-shopping"></i>
+             </div>
+             <div class="small-eye" id="pop-up">
+                 <i class="fa-solid fa-eye"></i>
+             </div>
+             <img :src="'../src/assets/product-pic/' + el.image_name">
+         </div>
+         <div class="pro-bottom">
+             <div class="letter"><p>{{ el.category_id }}</p></div>
+             <div class="letter"><h6>{{ el.title }}</h6></div>
+             <div class="letter"><p>${{ el.price }}</p></div>
+         </div>
      </div>
-     <div class="popup" v-show="popupVisible">
-        <div class="popup-content">
-            <div class="exit" @click="hidePopup"><i class="fa-solid fa-xmark"></i></div>
-        </div>
-     </div>
+    </div>
 </template>
 
 
 <script>
+import axios from 'axios';
     export default {
     data() {
         return {
-            popupVisible: false,
-            selectedProduct: null
+            productList: [],
+            errorMessages: ""
         };
     },
-    methods: {
-        showPopup() {
-            this.popupVisible = true;
-        },
-        hidePopup() {
-            this.popupVisible = false;
-            this.selectedProduct = null;
-        }
-    }
+    mounted() {
+        axios
+        .get("http://localhost:5283/Products/list")
+        .then((res) => {
+            if (res.status == 200) {
+            var data = res.data;
+            for (var i = data.length - 1; i >= data.length - 4 && i >= 0; i--) {
+                this.productList.push(data[i]);
+            }
+            }
+        })
+        .catch((err) => {
+            this.errorMessages = "cannot read data: " + err;
+        });
+    },
 }
 </script>
 
@@ -97,11 +51,11 @@
     /* ---------------------------product */
     .line-product{
         margin: auto;
+        margin-top: 50px;
         width: 80%;
-        height: 390px;
-        margin-bottom: 100px;
         display: flex;
-        justify-content: space-between;
+        justify-content: left;
+        gap: 20px;
     }
     .product{
         transition: 0.3s;

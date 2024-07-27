@@ -5,11 +5,9 @@ import room from '@/components/room.vue'
 import HeaderBot from '../components/HeaderBot.vue'
 import colorful from '@/components/colorful.vue'
 import lineproduct from '@/components/lineproduct.vue'
-import bestSell from '../components/bestSell.vue'
-import bestSell1 from '../components/bestSell1.vue'
 import FooterBot from '@/components/FooterBot.vue'
-import lineProduct1 from '@/components/lineProduct1.vue'
 import lineProduct2 from '@/components/lineProduct2.vue'
+import lineProduct3 from '@/components/lineProduct3.vue'
 import CountDown from '../components/CountDown.vue' 
 import Increase from '../components/Increase.vue'
 import slideAds from '../components/slideAds.vue'
@@ -22,10 +20,10 @@ import slideAds from '../components/slideAds.vue'
   <swip />
   <div class="on">
     <div class="half">
-      <img src="../assets/pic/mansory.png" alt="" />
+      <img src="../assets/pic/adobestock_637506025_neutre.jpg" alt="" />
     </div>
     <div class="half">
-      <img src="../assets/pic/mansory-1.png" alt="" />
+      <img src="../assets/pic/living-room-design-1200x620.jpg" alt="" />
     </div>
   </div>
   <div class="new-arrive">
@@ -118,8 +116,7 @@ import slideAds from '../components/slideAds.vue'
   <div class="best-seller">
     <a href="#" name="best"><h1>Best Seller Product</h1></a>
   </div>
-  <bestSell />
-  <bestSell1 />
+  <lineProduct3/>
   <div class="pot">
     <div class="ta-left">
       <p>Small Beautiful Piece For Decoration</p>
@@ -139,7 +136,6 @@ import slideAds from '../components/slideAds.vue'
   <div class="best-seller">
     <a href="#" name="popular"><h1>Most Popular Product</h1></a>
   </div>
-  <lineProduct1 />
   <lineProduct2 />
   <div class="diss">
     <div class="diss-left">

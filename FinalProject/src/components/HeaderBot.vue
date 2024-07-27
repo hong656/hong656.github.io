@@ -15,21 +15,10 @@
                 <li><p>Coarch</p></li>
             </ul>
         </div>
-        <div class="right">
-            <div class="search">
-                <div class="input-group flex-nowrap">
-                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-            </div>
-            <div class="e">
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <div class="e">
-                <i class="fa-solid fa-bag-shopping"></i>
-            </div>
+        <div class="right" style="padding-top: 18px;font-weight: 800;padding-left: 150px;">
+            <router-link to="/search"><p style="color:cadetblue ;"><i class="fa-solid fa-magnifying-glass"></i>Find Products</p></router-link>
         </div>
-    </div>
+    </div>  
 </template>
 
 <style scoped>

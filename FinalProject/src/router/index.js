@@ -5,7 +5,7 @@ import AboutView from '../views/AboutView.vue'
 import service from '../views/service.vue'
 import decor from '../views/decor.vue'
 import store from '../views/store.vue'
-
+import PageSearch from '@/views/PageSearch.vue'
 
 const routes =[
     {
@@ -36,6 +36,11 @@ const routes =[
       name: 'store',
       component: store
     },
+    {
+      path: '/search',
+      name: 'search',
+      component: PageSearch
+    }
   ];
 
 const router = createRouter({

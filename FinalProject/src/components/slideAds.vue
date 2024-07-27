@@ -23,16 +23,16 @@
             <swiper-slide><div class="block">
                 <img src="../assets/pic/dark-luxury.jpg">
             </div></swiper-slide>
-            <swiper-slide><div class="block" id="b1">
+            <swiper-slide><div class="block">
                 <img src="../assets/pic/dark.jpg">
             </div></swiper-slide>
-            <swiper-slide><div class="block" id="b2">
+            <swiper-slide><div class="block">
                 <img src="../assets/pic/intro.jpg">
             </div></swiper-slide>
-            <swiper-slide><div class="block" id="b3">
+            <swiper-slide><div class="block">
                 <img src="../assets/pic/login1.jpg">
             </div></swiper-slide>
-            <swiper-slide><div class="block" id="b4">
+            <swiper-slide><div class="block">
                 <img src="../assets/pic/luxury-dark-1.jpg" alt="">
             </div></swiper-slide>
         </swiper>
@@ -50,7 +50,7 @@
 
 <style scoped>
 .swiper{
-    margin-top: 200px;
+    margin-top: 100px;
     border-radius: 30px;
     width: 1365px;
     height: 455px;

@@ -2,13 +2,22 @@
     <div class="left-menu">
         <div class="logo">
             <img src="/src/assets/pic/logo1.png" alt="">
-            <RouterLink to="/"><h3>MUUTOS</h3></RouterLink>
+            <h3>MUUTOS</h3>
         </div>
         <ul class="list" type="none">
-            <li class="text-list"><i class="fa-solid fa-user-plus"></i>Create User</li>
-            <li class="text-list"><i class="fa-solid fa-user-gear"></i>Update User</li>
+            <router-link to="/admin/user"><li class="text-list"><i class="fa-solid fa-user-plus"></i>Create User</li></router-link>
+            <router-link to="/admin/user/Updateuser"><li class="text-list"><i class="fa-solid fa-user-gear"></i>Update User</li></router-link> 
             <li class="text-list"><i class="fa-solid fa-user-minus"></i>Delete User</li>
+            <router-link to="/admin/user/listuser"> <li class="text-list"><i class="fa-solid fa-address-book"></i>List User</li></router-link>
+            <li class="sheild"><h4>Product</h4></li>
+            <router-link to="/admin/user/upload"> <li class="text-list"><i class="fa-solid fa-file-arrow-up"></i>Upload File</li></router-link>
+            <router-link to="/admin/user/product"> <li class="text-list"><i class="fa-solid fa-cart-plus"></i>Create Product</li></router-link>
+            <router-link to="/admin/user/updateproduct"> <li class="text-list"><i class="fa-solid fa-wrench"></i>Update Product</li></router-link>
+            <router-link to=""> <li class="text-list"><i class="fa-solid fa-trash"></i>Delete Product</li></router-link>
+            <router-link to="/admin/user/listproduct"> <li class="text-list"><i class="fa-solid fa-clipboard-list"></i>List Product</li></router-link>
+
         </ul>
+        <button @click="logoutHandler">Log Out</button>
     </div>
 </template>
 
@@ -57,4 +66,40 @@
     font-size: 20px;
     margin-right: 10px;
 }
+.left-menu button{
+    width: 80px;
+    margin-left: 90px;
+    background-color: #3ba67d;
+}
+.sheild{
+    margin-top: 20px;
+    width: 100%;
+    padding-left: 60px;
+}
+.sheild h4{
+    color: white;
+}
+
+.left-menu button{
+    border-radius: 10px;
+    height: 35px;
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+.left-menu button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
 </style>
+
+<script>
+    export default {
+  methods: {
+    logoutHandler() {
+      localStorage.removeItem('isLogin')
+      this.$router.push('/admin/login')
+    }
+  }
+}
+</script>

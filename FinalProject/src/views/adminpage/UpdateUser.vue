@@ -9,9 +9,9 @@ import axios from 'axios'
   <div class="user-all">
     <div class="all-user-left"><adminMenu /></div>
     <div class="all-user-left">
-      <adminHead/>
-      <adminHeadlow/>
-      <div class="show-use" style="background-color:  blue;"><h3 style="color: white;font-weight: 800;">Create User</h3></div>
+      <adminHead />
+      <adminHeadlow />
+      <div class="show-use" style="background-color:  blue;"><h3 style="color: white;font-weight: 800;">Update User</h3></div>
       <form @submit.prevent="addUserHandler">
         <table class="table table-bordered">
           <thead>
@@ -26,7 +26,7 @@ import axios from 'axios'
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
+              <th scope="row"><input type="text" v-model="Id" id="txt_id"></th>
               <td><input type="text" v-model="firstName" id="txt_firstname" /></td>
               <td><input type="text" v-model="lastName" id="txt_lastname"/></td>
               <td><input type="text" v-model="email" id="txt_email"/></td>
@@ -35,7 +35,7 @@ import axios from 'axios'
             </tr>
           </tbody>
         </table>
-        <div class="bot"><input type="submit" value="Create User" /></div>
+        <div class="bot"><input type="submit" value="Update User" /></div>
         {{ errorMessage }}
       </form>
     </div>
@@ -56,6 +56,13 @@ export default {
   methods: {
     addUserHandler() {
     let isValid = true;
+        if (this.Id == '') {
+        document.getElementById('txt_id').style.border = '2px solid red';
+        isValid = false;
+        } else {
+        document.getElementById('txt_id').style.border = '';
+        }
+
         if (this.firstName == '') {
         document.getElementById('txt_firstname').style.border = '2px solid red';
         isValid = false;
@@ -96,6 +103,7 @@ export default {
         }
       
       var req = {
+        id: this.Id,
         first_name: this.firstName,
         last_name: this.lastName,
         email: this.email,
@@ -104,7 +112,7 @@ export default {
         errorMessage: ''
       }
       axios
-        .post('http://localhost:5283/api/users/create', req)
+        .put('http://localhost:5283/api/users/update', req)
         .then((res) => {
           if (res.status == 200) {
             this.errorMessage = 'Success create user.'
@@ -134,5 +142,8 @@ export default {
 }
 .all-user-left .bot {
   text-align: center;
+}
+#txt_id{
+    width: 50px;
 }
 </style>

@@ -30,27 +30,33 @@ export default {
         }
     },
     mounted() {
-        axios
+    axios
         .get("http://localhost:5283/Products/list")
         .then((res) => {
-            if (res.status == 200) {
+        if (res.status == 200) {
             var data = res.data;
-            for (var i = data.length - 1; i >= 0; i--) {
-                this.productList.push(data[i]);
+            var count = 0;
+            for (var el in data) {
+            if (count >= 8) {
+                break;
             }
+            this.productList.push(data[el]);
+            count++;
             }
+        }
         })
         .catch((err) => {
-            this.errorMessages = "cannot read data: " + err;
+        this.errorMessages = "cannot read data: " + err;
         });
     }
-}
+}    
 </script>
 
 
 <style scoped>
 .line-product{
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 .product{
     height: 390px;
