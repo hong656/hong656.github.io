@@ -8,11 +8,23 @@
                 <span class="input-group-text" id="basic-addon1">@</span>
                 <input type="text" v-model="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
             </div>
+            <div>
             <h6>Input Password</h6>
-            <div class="input-group mb-3">
-                <input type="password" class="form-control" v-model="password" placeholder="password" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2">***</span>
-            </div>
+              <div class="input-group mb-3">
+                  <input
+                    :type="isPassword ? 'password' : 'text'"
+                    class="form-control"
+                    v-model="password"
+                    placeholder="password"
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                  />
+                  <span class="input-group-text" id="basic-addon2" @click="togglePasswordVisibility">
+                    <i v-if="isPassword" class="fa-solid fa-eye-slash"></i>
+                    <i v-else class="fa-solid fa-eye"></i>
+                  </span>
+              </div>
+          </div>
             <h6>Fullname</h6>
             <div class="row g-3">
                 <div class="col">
@@ -70,39 +82,52 @@
 
 </style>
 
-  <script>
-  import axios from "axios";
-  
-  export default {
-    data() {
-      return {
-        username: "",
-        password: "",
-        errorMessage: "",
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      username: "",
+      password: "",
+      errorMessage: "",
+      isPassword: true,
+    };
+  },
+  methods: {
+
+    togglePasswordVisibility() {
+      this.isPassword = !this.isPassword;
+    },
+
+    loginHandler() {
+      // Check if both fields are filled
+      if (this.username === "" || this.password === "") {
+        this.errorMessage = "Username and password are required.";
+        return;
+      }
+
+      var req = {
+        username: this.username,
+        password: this.password,
       };
+      
+      axios
+        .post("http://localhost:5283/api/login", req)
+        .then((res) => {
+          if (res.status == 200) {
+            var data = res.data;
+            localStorage.setItem("isLogin", "OK");
+            localStorage.setItem("username", data.username);
+            this.$router.push("/admin/user");
+          } else {
+            this.errorMessage = "Wrong username or password.";
+          }
+        })
+        .catch((error) => {
+          this.errorMessage = "Wrong username or password.";
+        });
     },
-    methods: {
-      loginHandler() {
-        var req = {
-          username: this.username,
-          password: this.password,
-        };
-        axios
-          .post("http://localhost:5283/api/login", req)
-          .then((res) => {
-            if (res.status == 200) {
-              var data = res.data;
-              localStorage.setItem("isLogin", "OK");
-              localStorage.setItem("username", data.username);
-              this.$router.push("/admin/user");
-            } else {
-              this.errorMessage = "Wrong username and password";
-            }
-          })
-          .catch((error) => {
-            this.errorMessage = "Wrong username and password";
-          });
-      },
-    },
-  };
-  </script>
+  },
+};
+</script>

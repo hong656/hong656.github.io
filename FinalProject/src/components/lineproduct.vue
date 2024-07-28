@@ -128,45 +128,6 @@ import axios from 'axios';
         transition: 0.2s;
         transform: scale(1.1);
     }
-    /* -------------------------popup */
-    .popup{
-    display: none; /* Initially hidden */
-    position: fixed; /* Fixed position to ensure it stays in place */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 1000; /* Ensure it is above other content */
-}
-.popup[style*="display: block;"] {
-    display: block !important;
-}
-.popup-content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the popup */
-    background-color: white;
-    width: 1000px;
-    height: 500px;
-}
-
-.exit{
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    top: -10px;
-    right: -10px;
-    cursor: pointer;
-    background-color: black;
-}
-.exit i{
-    text-align: center;
-    color: white;
-    margin-left: 7px;
-}
 </style>
 
 

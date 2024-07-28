@@ -7,13 +7,11 @@
         <ul class="list" type="none">
             <router-link to="/admin/user"><li class="text-list"><i class="fa-solid fa-user-plus"></i>Create User</li></router-link>
             <router-link to="/admin/user/Updateuser"><li class="text-list"><i class="fa-solid fa-user-gear"></i>Update User</li></router-link> 
-            <li class="text-list"><i class="fa-solid fa-user-minus"></i>Delete User</li>
             <router-link to="/admin/user/listuser"> <li class="text-list"><i class="fa-solid fa-address-book"></i>List User</li></router-link>
             <li class="sheild"><h4>Product</h4></li>
             <router-link to="/admin/user/upload"> <li class="text-list"><i class="fa-solid fa-file-arrow-up"></i>Upload File</li></router-link>
             <router-link to="/admin/user/product"> <li class="text-list"><i class="fa-solid fa-cart-plus"></i>Create Product</li></router-link>
             <router-link to="/admin/user/updateproduct"> <li class="text-list"><i class="fa-solid fa-wrench"></i>Update Product</li></router-link>
-            <router-link to=""> <li class="text-list"><i class="fa-solid fa-trash"></i>Delete Product</li></router-link>
             <router-link to="/admin/user/listproduct"> <li class="text-list"><i class="fa-solid fa-clipboard-list"></i>List Product</li></router-link>
 
         </ul>
