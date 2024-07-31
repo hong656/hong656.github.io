@@ -46,6 +46,7 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      Id: '',
       Title: '',
       Price: '',
       Description: '',
@@ -63,35 +64,35 @@ export default {
         document.getElementById('txt_id').style.border = '';
         }
 
-        if (this.firstName == '') {
+        if (this.Title == '') {
         document.getElementById('txt_firstname').style.border = '2px solid red';
         isValid = false;
         } else {
         document.getElementById('txt_firstname').style.border = '';
         }
 
-        if (this.lastName == '') {
+        if (this.Price == '') {
         document.getElementById('txt_lastname').style.border = '2px solid red';
         isValid = false;
         } else {
         document.getElementById('txt_lastname').style.border = '';
         }
 
-        if (this.email == '') {
+        if (this.Description == '') {
         document.getElementById('txt_email').style.border = '2px solid red';
         isValid = false;
         } else {
         document.getElementById('txt_email').style.border = '';
         }
 
-        if (this.username == '') {
+        if (this.Category_id == '') {
         document.getElementById('txt_username').style.border = '2px solid red';
         isValid = false;
         } else {
         document.getElementById('txt_username').style.border = '';
         }
 
-        if (this.password == '') {
+        if (this.Image_name == '') {
         document.getElementById('txt_password').style.border = '2px solid red';
         isValid = false;
         } else {
@@ -118,12 +119,13 @@ export default {
             this.errorMessage = 'Success create user.'
 
             //clear
-            this.firstName = ''
-            this.lastName = ''
-            this.email = ''
-            this.username = ''
-            this.password = ''
-            this.$router.push('/admin/user/listproduct')
+            this.Id = ''
+            this.Title = ''
+            this.Price = ''
+            this.Description = ''
+            this.Category_id = ''
+            this.Image_name = ''
+             this.$router.push('/admin/user/listproduct')
           } else {
             this.errorMessage = 'Error create user'
           }

@@ -201,7 +201,7 @@
                 <div class="small-cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
-                <div class="small-eye">
+                <div class="small-eye" @click="showPopup">
                     <i class="fa-solid fa-eye"></i>
                 </div>
                 <img src="pic/living-room-brown-sofa-400x400.png" alt="">
@@ -396,7 +396,7 @@
     <!-- ---------------popup -->
      <div class="popup">
         <div class="popup-content">
-            <div class="exit"><i class="fa-solid fa-xmark"></i></div>
+            <div class="exit" @click="hidePopup"><i class="fa-solid fa-xmark"></i></div>
         </div>
      </div>
 

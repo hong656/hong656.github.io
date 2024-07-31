@@ -46,6 +46,7 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      Id: '',
       firstName: '',
       lastName: '',
       email: '',
@@ -116,7 +117,6 @@ export default {
         .then((res) => {
           if (res.status == 200) {
             this.errorMessage = 'Success create user.'
-
             //clear
             this.firstName = ''
             this.lastName = ''

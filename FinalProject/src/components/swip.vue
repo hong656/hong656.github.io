@@ -65,7 +65,7 @@ export default {
             if (this.slides.length > 0) {
                 this.$nextTick(() => {
                     this.showSlide(this.slideIndex);
-                    this.interValID = setInterval(this.nextSlide, 10000); // Change slide every 10 seconds
+                    this.interValID = setInterval(this.nextSlide, 5000); // Change slide every 10 seconds
                 });
             }
         },
