@@ -10,7 +10,7 @@ namespace FurnitureStore.Controllers;
 [Route("Products")]
 public class ProductController : ControllerBase
 {
-    public readonly IConfiguration _Configuration;
+    private readonly IConfiguration _Configuration;
 
     public ProductController(IConfiguration configuration)
     {
