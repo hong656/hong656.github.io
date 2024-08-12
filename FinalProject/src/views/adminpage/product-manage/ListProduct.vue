@@ -36,7 +36,7 @@ import axios from 'axios'
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div>  
         </div> 
     </div>
 </template>
